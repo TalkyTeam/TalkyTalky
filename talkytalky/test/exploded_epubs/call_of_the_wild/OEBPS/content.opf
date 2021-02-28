@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<package xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="id">
+  <metadata>
+    <dc:rights>Public domain in the USA.</dc:rights>
+    <dc:identifier opf:scheme="URI" id="id">http://www.gutenberg.org/215</dc:identifier>
+    <dc:creator opf:file-as="London, Jack">Jack London</dc:creator>
+    <dc:title>The Call of the Wild</dc:title>
+    <dc:language xsi:type="dcterms:RFC4646">en</dc:language>
+    <dc:subject>Dogs -- Fiction</dc:subject>
+    <dc:subject>Adventure stories</dc:subject>
+    <dc:subject>Nature stories</dc:subject>
+    <dc:subject>Klondike River Valley (Yukon) -- Fiction</dc:subject>
+    <dc:subject>Sled dogs -- Fiction</dc:subject>
+    <dc:subject>Pet theft -- Fiction</dc:subject>
+    <dc:subject>Feral dogs -- Fiction</dc:subject>
+    <dc:subject>Animal welfare -- Fiction</dc:subject>
+    <dc:date opf:event="publication">2008-07-02</dc:date>
+    <dc:date opf:event="conversion">2021-01-01T08:52:48.910691+00:00</dc:date>
+    <dc:source>https://www.gutenberg.org/files/215/215-h/215-h.htm</dc:source>
+    <meta name="cover" content="item1"/>
+  </metadata>
+  <manifest>
+    <!--Image: 463 x 700 size=64885 q=60-->
+    <item href="@public@vhost@g@gutenberg@html@files@215@215-h@images@cover.jpg" id="item1" media-type="image/jpeg"/>
+    <item href="pgepub.css" id="item2" media-type="text/css"/>
+    <item href="0.css" id="item3" media-type="text/css"/>
+    <item href="1.css" id="item4" media-type="text/css"/>
+    <!--Chunk: size=3279 Split on div.chapter-->
+    <item href="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-0.htm.html" id="item5" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=22056 Split on div.chapter-->
+    <item href="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-1.htm.html" id="item6" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=19419 Split on div.chapter-->
+    <item href="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-2.htm.html" id="item7" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=29589 Split on div.chapter-->
+    <item href="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-3.htm.html" id="item8" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=18696 Split on div.chapter-->
+    <item href="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-4.htm.html" id="item9" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=31204 Split on div.chapter-->
+    <item href="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-5.htm.html" id="item10" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=27936 Split on div.chapter-->
+    <item href="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-6.htm.html" id="item11" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=56101-->
+    <item href="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-7.htm.html" id="item12" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="wrap0000.html" id="coverpage-wrapper" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="coverpage-wrapper" linear="yes"/>
+    <itemref idref="item5" linear="yes"/>
+    <itemref idref="item6" linear="yes"/>
+    <itemref idref="item7" linear="yes"/>
+    <itemref idref="item8" linear="yes"/>
+    <itemref idref="item9" linear="yes"/>
+    <itemref idref="item10" linear="yes"/>
+    <itemref idref="item11" linear="yes"/>
+    <itemref idref="item12" linear="yes"/>
+  </spine>
+  <guide>
+    <reference type="toc" title="Contents" href="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-0.htm.html#pgepubid00001"/>
+    <reference type="cover" title="Cover" href="wrap0000.html"/>
+  </guide>
+</package>

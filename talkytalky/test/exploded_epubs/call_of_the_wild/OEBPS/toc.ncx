@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!DOCTYPE ncx PUBLIC '-//NISO//DTD ncx 2005-1//EN' 'http://www.daisy.org/z3986/2005/ncx-2005-1.dtd'>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
+  <head>
+    <meta name="dtb:uid" content="http://www.gutenberg.org/215"/>
+    <meta name="dtb:depth" content="1"/>
+    <meta name="dtb:generator" content="Ebookmaker 0.10.1 by Project Gutenberg"/>
+    <meta name="dtb:totalPageCount" content="0"/>
+    <meta name="dtb:maxPageNumber" content="0"/>
+  </head>
+  <docTitle>
+    <text>The Call of the Wild</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="np-1" playOrder="1">
+      <navLabel>
+        <text>The Call of the Wild</text>
+      </navLabel>
+      <content src="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-0.htm.html#pgepubid00000"/>
+    </navPoint>
+    <navPoint id="np-2" playOrder="2">
+      <navLabel>
+        <text>Contents</text>
+      </navLabel>
+      <content src="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-0.htm.html#pgepubid00001"/>
+    </navPoint>
+    <navPoint id="np-3" playOrder="3">
+      <navLabel>
+        <text>Chapter I. Into the Primitive</text>
+      </navLabel>
+      <content src="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-1.htm.html#pgepubid00002"/>
+    </navPoint>
+    <navPoint id="np-4" playOrder="4">
+      <navLabel>
+        <text>Chapter II. The Law of Club and Fang</text>
+      </navLabel>
+      <content src="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-2.htm.html#pgepubid00003"/>
+    </navPoint>
+    <navPoint id="np-5" playOrder="5">
+      <navLabel>
+        <text>Chapter III. The Dominant Primordial Beast</text>
+      </navLabel>
+      <content src="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-3.htm.html#pgepubid00004"/>
+    </navPoint>
+    <navPoint id="np-6" playOrder="6">
+      <navLabel>
+        <text>Chapter IV. Who Has Won to Mastership</text>
+      </navLabel>
+      <content src="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-4.htm.html#pgepubid00005"/>
+    </navPoint>
+    <navPoint id="np-7" playOrder="7">
+      <navLabel>
+        <text>Chapter V. The Toil of Trace and Trail</text>
+      </navLabel>
+      <content src="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-5.htm.html#pgepubid00006"/>
+    </navPoint>
+    <navPoint id="np-8" playOrder="8">
+      <navLabel>
+        <text>Chapter VI. For the Love of a Man</text>
+      </navLabel>
+      <content src="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-6.htm.html#pgepubid00007"/>
+    </navPoint>
+    <navPoint id="np-9" playOrder="9">
+      <navLabel>
+        <text>Chapter VII. The Sounding of the Call</text>
+      </navLabel>
+      <content src="@public@vhost@g@gutenberg@html@files@215@215-h@215-h-7.htm.html#pgepubid00008"/>
+    </navPoint>
+  </navMap>
+</ncx>

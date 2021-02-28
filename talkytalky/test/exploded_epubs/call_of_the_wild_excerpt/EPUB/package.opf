@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" prefix="dc: http://purl.org/dc/elements/1.1/" unique-identifier="d7560e33" version="3.0">
+    <metadata>
+        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:f="http://www.daisy.org/ns/pipeline/internal-functions" id="d6916e17">The Call of the Wild</dc:title>
+        <meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:f="http://www.daisy.org/ns/pipeline/internal-functions" property="title-type" refines="#d6916e17">main</meta>
+        <dc:identifier xmlns:dc="http://purl.org/dc/elements/1.1/" id="d7560e33">abaf0c70-7e6e-4670-b987-3d4d4e1a0fef</dc:identifier>
+        <dc:language xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:f="http://www.daisy.org/ns/pipeline/internal-functions">en</dc:language>
+        <dc:language xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:f="http://www.daisy.org/ns/pipeline/internal-functions">eng</dc:language>
+        <meta property="dcterms:modified">2017-12-09T12:51:32Z</meta>
+        <meta property="media:duration" refines="#audio_smil">0:01:49</meta>
+        <meta property="media:duration">0:01:49</meta>
+        <meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:f="http://www.daisy.org/ns/pipeline/internal-functions" property="dc:date">2017-12-09T12:51:31+00:00</meta>
+        <meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:f="http://www.daisy.org/ns/pipeline/internal-functions" property="dcterms:title">The Call of the Wild</meta>
+        <meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:f="http://www.daisy.org/ns/pipeline/internal-functions" property="dcterms:creator">Jack London</meta>
+        <meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:f="http://www.daisy.org/ns/pipeline/internal-functions" property="dcterms:description">London's classic tale about a dog's adventures in the North.</meta>
+        <meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:f="http://www.daisy.org/ns/pipeline/internal-functions" property="dcterms:language">en</meta>
+        <meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:f="http://www.daisy.org/ns/pipeline/internal-functions" property="dcterms:publisher">Bookshare</meta>
+        <meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:f="http://www.daisy.org/ns/pipeline/internal-functions" property="dcterms:format">ANSI/NISO Z39.86-2005</meta>
+        <link xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:f="http://www.daisy.org/ns/pipeline/internal-functions" rel="mods-record" href="zedai-mods.xml"/>
+    </metadata>
+    <manifest>
+        <item media-type="application/xhtml+xml" media-overlay="audio_smil" id="text" href="The_Call_of_the_Wild-2.xhtml"/>
+        <item media-type="audio/mpeg" id="audio" href="call_of_the_wild_excerpt.mp3"/>
+        <item media-type="application/smil+xml" id="audio_smil" href="call_of_the_wild_excerpt.smil"/>
+        <item properties="nav" media-type="application/xhtml+xml" id="toc" href="toc.xhtml"/>
+    </manifest>
+    <spine>
+        <itemref idref="text" id="itemref_1"/>
+        <itemref idref="toc" id="itemref_2"/>
+    </spine>
+</package>
+

@@ -1,0 +1,26 @@
+/*  XML blockout */
+p {
+    margin-top: 0.75em;
+    text-align: justify;
+    margin-bottom: 0.75em
+    }
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    /* all headings centered */
+    clear: both
+    }
+body {
+    margin-left: 6%;
+    margin-right: 6%
+    }
+.center {
+    text-align: center
+    }
+.story {
+    font-size: 133%
+    }
+.figcenter {
+    margin: auto;
+    text-align: center
+    }
+/* XML end  */

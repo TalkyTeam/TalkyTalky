@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<package xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="id">
+  <metadata>
+    <dc:rights>Public domain in the USA.</dc:rights>
+    <dc:identifier opf:scheme="URI" id="id">http://www.gutenberg.org/12109</dc:identifier>
+    <dc:creator opf:file-as="Caldecott, Randolph">Randolph Caldecott</dc:creator>
+    <dc:title>The House That Jack Built / One of R. Caldecott's Picture Books</dc:title>
+    <dc:language xsi:type="dcterms:RFC4646">en</dc:language>
+    <dc:subject>Children's poetry, English</dc:subject>
+    <dc:subject>Nursery rhymes</dc:subject>
+    <dc:subject>Picture books for children</dc:subject>
+    <dc:date opf:event="publication">2004-04-01</dc:date>
+    <dc:date opf:event="conversion">2021-01-06T10:42:18.049339+00:00</dc:date>
+    <dc:source>https://www.gutenberg.org/files/12109/12109-h/12109-h.htm</dc:source>
+    <meta name="cover" content="item1"/>
+  </metadata>
+  <manifest>
+    <!--Image: 1200 x 1800 size=57781 -->
+    <item href="@export@sunsite@users@gutenbackend@cache@epub@12109@12109-cover.png" id="item1" media-type="image/png"/>
+    <item href="pgepub.css" id="item2" media-type="text/css"/>
+    <item href="0.css" id="item3" media-type="text/css"/>
+    <item href="1.css" id="item4" media-type="text/css"/>
+    <!--Chunk: size=35189-->
+    <item href="@public@vhost@g@gutenberg@html@files@12109@12109-h@12109-h-0.htm.html" id="item5" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="wrap0000.html" id="coverpage-wrapper" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="coverpage-wrapper" linear="yes"/>
+    <itemref idref="item5" linear="yes"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="wrap0000.html"/>
+  </guide>
+</package>
