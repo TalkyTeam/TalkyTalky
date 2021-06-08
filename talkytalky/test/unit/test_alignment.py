@@ -1,9 +1,11 @@
 from texttable import Texttable
 
-from talkytalky.util import html, asr_json
-from talkytalky.util.alignment import align_trans_to_html_files, WORD_LENGTH, CHAR_LENGTH, lcs_memo, words_equal, \
-    acceptable_levenshtein, soundex, backtrack
-from talkytalky.util.util import make_dir, get_project_root
+from talkytalky.alignment.word_comparison import words_equal, acceptable_levenshtein, soundex
+from talkytalky.alignment.alignment import CHAR_LENGTH, WORD_LENGTH, align_trans_to_html_files
+from talkytalky.alignment.lcs import lcs_memo, backtrack
+from talkytalky import asr_json
+from talkytalky.util import html
+from talkytalky.util.util import get_project_root, make_dir, get_test_root
 
 
 def test_align_trans_to_html_sentences_wild_excerpt():
@@ -56,12 +58,12 @@ def test_align_trans_to_html_sentences_jack():
 
 
 def align_and_show_table(trans_file, html_file, out_file, dumb_phrases=False, match_criteria=WORD_LENGTH):
-    project_root = get_project_root()
-    out_dir =  project_root + "/test/temp/util/alignment/"
+    test_root = get_test_root()
+    out_dir =  test_root + "/temp/util/alignment/"
     make_dir(out_dir)
 
-    trans_file = project_root + "/test/transcriptions/" + trans_file
-    html_file = project_root + "/test/exploded_epubs/" + html_file
+    trans_file = test_root + "/transcriptions/" + trans_file
+    html_file = test_root + "/exploded_epubs/" + html_file
     out_file = out_dir + out_file
 
     '''
@@ -121,11 +123,14 @@ def show_lcs_table(memo_table):
 def test_align_word_equals():
     align_lcs_sentences_rabbit(words_equal)
 
+
 def test_align_leven():
     align_lcs_sentences_rabbit(acceptable_levenshtein)
 
+
 def test_align_soundex():
     align_lcs_sentences_rabbit(soundex)
+
 
 def align_lcs_sentences_rabbit(similarity_measure):
 
@@ -133,12 +138,12 @@ def align_lcs_sentences_rabbit(similarity_measure):
     html_file = "peter_rabbit_excerpt/OEBPS/@public@vhost@g@gutenberg@html@files@14838@14838-h@14838-h-0.htm.html"
     out_file =  "peter_rabbit_excerpt_with_sentence_ids_lcs_out.html"
 
-    project_root = get_project_root()
-    out_dir =  project_root + "/test/temp/util/alignment/"
+    test_root = get_test_root()
+    out_dir =  test_root + "/temp/alignment/"
     make_dir(out_dir)
 
-    trans_file = project_root + "/test/transcriptions/" + trans_file
-    html_file = project_root + "/test/exploded_epubs/" + html_file
+    trans_file = test_root + "/transcriptions/" + trans_file
+    html_file = test_root + "/exploded_epubs/" + html_file
     out_file = out_dir + out_file
 
     transcript = asr_json.loadf(trans_file)

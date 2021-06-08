@@ -1,7 +1,7 @@
 import json
 import nltk
 
-from talkytalky.util.util import normalize_space
+from talkytalky.util.string import normalize_space
 
 """Utility class for loading Amazon Automatic Speech Recognition data."""
 

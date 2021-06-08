@@ -1,65 +1,5 @@
-from typing import List
-
-from libindic.soundex import Soundex
-from nltk import edit_distance
-from nltk.translate.gale_church import align_blocks
-
-from talkytalky.util import html, asr_json
-from talkytalky.util.util import contains_letters
-
-WORD_LENGTH = 1
-CHAR_LENGTH = 2
-
-def align_trans_to_html_files(trans_in_file_path, html_in_file, html_out_file, match_criteria=WORD_LENGTH):
-    """
-    Given a transcription file and an HTML file, return the sentences aligned and write the span-id labelled
-    sentence HTML file to a new file
-    :param trans_in_file_path:
-    :param html_in_file:
-    :param html_out_file:
-    :return: List of tuples, HTML Sentence to Transcript Sentence
-    """
-    with open(trans_in_file_path, 'r') as trans_in_file:
-        transcript = asr_json.load(trans_in_file)
-        html_document = html.assign_sentence_ids(html_in_file, html_out_file)
-        return align_trans_to_html_sentences(transcript.sentences, html_document.sentences, match_criteria=match_criteria)
-
-
-def align_trans_to_html_sentences(transcript_sentences, html_sentences, match_criteria=WORD_LENGTH):
-    """
-    Does sentence-level alignment on the transcript and html file.
-    Susceptible to inaccurate sentence boundaries.
-    :param transcript_sentences: List of sentences in the transcript
-    :param html_sentences: List of sentences in the HTML
-    :param match_criteria: Length-based, # of words in a sentence, or # of characters? (WORD_LENGTH or CHAR_LENGTH)
-    :return:
-    """
-    if match_criteria == CHAR_LENGTH:
-        transcript_lengths = list(map(lambda s: s.word_count, transcript_sentences))
-        html_sentence_lengths = list(map(lambda s: s.word_count, html_sentences))
-    else:
-        transcript_lengths = list(map(lambda s: s.character_count, transcript_sentences))
-        html_sentence_lengths = list(map(lambda s: s.character_count, html_sentences))
-
-    result = align_blocks(html_sentence_lengths, transcript_lengths)
-    print(transcript_lengths)
-
-    print(html_sentence_lengths)
-
-    print(result)
-    sentence_pairs = []
-    for sentence_index_pair in result:
-        sentence_pair = (html_sentences[sentence_index_pair[0]],
-                         transcript_sentences[sentence_index_pair[1]])
-        sentence_pairs.append(sentence_pair)
-
-    return sentence_pairs
-
-
-def align_using_lcs_words(trans_in_file, html_in_file, html_out_file, string_comparison):
-    html_document = html.assign_sentence_ids(html_in_file, html_out_file)
-    transcript = asr_json.loadf(trans_in_file)
-    return html_document, lcs(html_document, transcript, string_comparison)
+from talkytalky.alignment.AlignedItem import AlignedItem
+from talkytalky.util.string import contains_letters
 
 
 def lcs(html_document, transcript, string_equality):
@@ -89,7 +29,7 @@ def lcs_memo(html_document, transcript, string_equality):
     :param string_equality:
     :return:
     """
-    # find the length of the strings 
+    # find the length of the strings
     html_num_words = len(html_document.items)
     print("# HTML words " + str(html_num_words))
     transcript_num_words = len(transcript.items)
@@ -194,51 +134,3 @@ def backtrack_recursive(lcs_memo_table, html_document, transcript, i, j, string_
                                    string_equality)
     return backtrack_recursive(lcs_memo_table, html_document, transcript, i - 1, j,
                                string_equality)
-
-
-"""
-Word comparison methods to use with longest common subsequence: string equality, Levenshtein distance, and soundex
-"""
-
-def words_equal(word1, word2):
-    return str.lower(word1.strip()) == str.lower(word2.strip())
-
-def acceptable_levenshtein(word1, word2):
-    """
-    Generic fuzzy string matcher, looks at number of edits to get from one string to another
-    :param word1:
-    :param word2:
-    :return:
-    """
-    if words_equal(word1, word2):
-        return True
-    return edit_distance(str.lower(word1),str.lower(word2)) < 3
-
-def soundex(word1, word2):
-    """
-    See https://libindic.org/Soundex
-    :param word1:
-    :param word2:
-    :return:
-    """
-    if words_equal(word1, word2):
-        return True
-    comparator = Soundex()
-    # Result of 1 means sounds the same
-    if comparator.compare(word1,word2) == 1:
-        return True
-    return False
-
-class AlignedItem:
-    html_item: List[html.HtmlItem]
-    trans_item: List[asr_json.Item]
-
-    def __init__(self):
-        self.trans_item = []
-        self.html_item = []
-
-    def __repr__(self):
-        return self.content
-
-    def __str__(self):
-        return self.content

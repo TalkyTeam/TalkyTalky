@@ -1,9 +1,9 @@
 import os
 import re
 
-from talkytalky.util.util import contains_interesting_text, normalize_space
 from bs4 import BeautifulSoup
 from nltk.tokenize import sent_tokenize, word_tokenize
+from talkytalky.util.string import contains_interesting_text, normalize_space
 
 GUTENBERG_HEADER_PATTERN = re.compile(r'\*\*\* START OF THIS PROJECT[ A-Z]+\*\*\*')
 GUTENBERG_FOOTER_PATTERN = re.compile(r'\*\*\* END OF THIS PROJECT[ A-Z]+\*\*\*')

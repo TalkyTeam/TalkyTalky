@@ -73,7 +73,7 @@ def hunpos_tag(words):
     :return:
     """
     root = get_project_root()
-    model_path = root + '/models/tagging/hunpos/'
+    model_path = root + '/talkytalky/models/tagging/hunpos/'
     ht = HunposTagger(model_path + 'english.model', model_path + 'hunpos-tag', encoding='utf-8')
     tagged_words =  ht.tag(words)
     fixed_tagged_words = list(map(lambda t: (t[0], t[1].decode('utf-8')), tagged_words))

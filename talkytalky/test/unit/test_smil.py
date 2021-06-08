@@ -1,19 +1,19 @@
-from talkytalky.util import smil
-
-from talkytalky.util.alignment import align_trans_to_html_files, align_using_lcs_words, soundex
-from talkytalky.util.util import make_dir, get_project_root
+from talkytalky import smil
+from talkytalky.alignment.alignment import align_trans_to_html_files, align_using_lcs_words
+from talkytalky.alignment.word_comparison import soundex
+from talkytalky.util.util import make_dir, get_project_root, get_test_root
 
 
 def test_generate_smil():
-    project_root = get_project_root()
+    test_root = get_test_root()
 
-    out_dir = project_root + "/test/temp/util/smil/"
+    out_dir = test_root + "/temp/util/smil/"
     make_dir(out_dir)
     out_file = out_dir + "call_of_the_wild_ch1_with_sentence_ids.html"
 
     html_file_name = "@public@vhost@g@gutenberg@html@files@215@215-h@215-h-1.htm.html"
-    html_file = project_root + "/test/exploded_epubs/call_of_the_wild/OEBPS/" + html_file_name
-    transcriptions_file = project_root + "/test/transcriptions/call_of_the_wild_chapter_1.json"
+    html_file = test_root + "/exploded_epubs/call_of_the_wild/OEBPS/" + html_file_name
+    transcriptions_file = test_root + "/transcriptions/call_of_the_wild_chapter_1.json"
 
     sentence_pairs = align_trans_to_html_files(transcriptions_file, html_file, out_file)
 
@@ -67,13 +67,13 @@ def test_lcs_smil_peter_rabbit():
 def generate_lcs_smil(trans_file, html_file, html_smil_filename, out_file, mp3_filename, smil_filename, similarity_measure):
 
     print([trans_file, html_file, html_smil_filename, out_file, mp3_filename, smil_filename, similarity_measure])
-    project_root = get_project_root()
-    out_dir = project_root + "/test/temp/util/smil/"
+    test_root = get_test_root()
+    out_dir = test_root + "/temp/util/smil/"
     make_dir(out_dir)
     smil_filename = out_dir + smil_filename
 
-    trans_file = project_root + "/test/transcriptions/" + trans_file
-    html_file = project_root + "/test/exploded_epubs/" + html_file
+    trans_file = test_root + "/transcriptions/" + trans_file
+    html_file = test_root + "/exploded_epubs/" + html_file
     out_file = out_dir + out_file
 
     html_document, aligned_word_list = align_using_lcs_words(trans_file, html_file, out_file, similarity_measure)

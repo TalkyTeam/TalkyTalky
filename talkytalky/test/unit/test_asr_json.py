@@ -1,11 +1,11 @@
-from talkytalky.util import asr_json
+from talkytalky import asr_json
 from talkytalky.util.util import get_project_root
 
 
 def test_parse():
     project_root = get_project_root()
     print(project_root)
-    infile = open(project_root + "/test/transcriptions/peter_rabbit.json")
+    infile = open(project_root + "/talkytalky/test/transcriptions/peter_rabbit.json")
     transcript = asr_json.load(infile)
 
     assert len(transcript.items) == 1099
