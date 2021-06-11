@@ -1,4 +1,4 @@
-from talkytalky import asr_json
+from talkytalky.stt import asr_json
 from talkytalky.util import html
 from typing import List
 

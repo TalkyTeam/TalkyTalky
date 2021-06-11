@@ -16,6 +16,10 @@ nltk = "*"
 texttable = "*"
 libindic-soundex = "*"
 libindic-utils = "*"
+ffmpeg-python = "*"
+pydev = "*"
+vosk = "*"
+pydub = "*"
 
 [requires]
 python_version = "3.8"

@@ -1,4 +1,4 @@
-from talkytalky import asr_json
+from talkytalky.stt import asr_json
 from talkytalky.util.util import get_project_root
 
 

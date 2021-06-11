@@ -3,9 +3,9 @@ from texttable import Texttable
 from talkytalky.alignment.word_comparison import words_equal, acceptable_levenshtein, soundex
 from talkytalky.alignment.alignment import CHAR_LENGTH, WORD_LENGTH, align_trans_to_html_files
 from talkytalky.alignment.lcs import lcs_memo, backtrack
-from talkytalky import asr_json
+from talkytalky.stt import asr_json
 from talkytalky.util import html
-from talkytalky.util.util import get_project_root, make_dir, get_test_root
+from talkytalky.util.util import make_dir, get_test_root
 
 
 def test_align_trans_to_html_sentences_wild_excerpt():

@@ -3,7 +3,7 @@
 from nltk.translate.gale_church import align_blocks
 
 from talkytalky.alignment.lcs import lcs
-from talkytalky import asr_json
+from talkytalky.stt import asr_json
 from talkytalky.util import html
 
 WORD_LENGTH = 1

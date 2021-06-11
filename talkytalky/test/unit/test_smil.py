@@ -1,7 +1,7 @@
 from talkytalky import smil
 from talkytalky.alignment.alignment import align_trans_to_html_files, align_using_lcs_words
 from talkytalky.alignment.word_comparison import soundex
-from talkytalky.util.util import make_dir, get_project_root, get_test_root
+from talkytalky.util.util import make_dir, get_test_root
 
 
 def test_generate_smil():
